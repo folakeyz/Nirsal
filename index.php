@@ -3,9 +3,19 @@
 if(isset($_GET['id'])){
 $bvn = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING);  
  $tsql= "SELECT * FROM [Targeted Credit Facility (TCF) - Household Loan Application Form] WHERE BVN='$bvn'";
-$getResults= sqlsrv_query($conn, $tsql);
-}else{
-    echo'<script>
+$params = array();
+$options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
+    $getResults= sqlsrv_query($conn, $tsql, $params, $options);
+    $count=sqlsrv_num_rows($getResults);
+    
+}elseif($count == 0){
+       echo'<script>
+    window.location.href="https://covid19.nmfb.com.ng/";
+    </script>'; 
+}
+
+else{
+       echo'<script>
     window.location.href="https://covid19.nmfb.com.ng/";
     </script>';
 }
