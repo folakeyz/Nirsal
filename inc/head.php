@@ -1,4 +1,4 @@
-<?php //require'inc/dbh.inc.php';?>
+<?php require'inc/dbh.inc.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
