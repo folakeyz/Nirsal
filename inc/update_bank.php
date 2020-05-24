@@ -2,14 +2,19 @@
 require'dbh.inc.php';
 if(isset($_POST)){
     
- $bname = filter_input(INPUT_POST, 'bname', FILTER_SANITIZE_STRING);
- $bnumber = filter_input(INPUT_POST, 'bnumber', FILTER_SANITIZE_STRING);
- $bvn = filter_input(INPUT_POST, 'bvn', FILTER_SANITIZE_STRING);
+ echo $bname = filter_input(INPUT_POST, 'bname', FILTER_SANITIZE_STRING);
+ echo $bnumber = filter_input(INPUT_POST, 'bnumber', FILTER_SANITIZE_STRING);
+ echo $bvn = filter_input(INPUT_POST, 'bvn', FILTER_SANITIZE_STRING);
     
- $tsql= "UPDATE GuarantorsForm SET ApplicantBankNames='$bname', ApplicantAccountNumbers='$bnumber' WHERE ApplicantBvn='$bvn'";
+ $tsql= "UPDATE GuarantorsForms SET ApplicantBankNames='$bname', ApplicantAccountNumbers='$bnumber' WHERE ApplicantBvn='$bvn'";
  //$params = array($bname, $bnumber);
  $getResults= sqlsrv_query($conn, $tsql);
-
+  /* $tsql= "SELECT * FROM GuarantorsForm WHERE ApplicantBvn='$ApplicantBvnbvn'";
+$params = array();
+$options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
+    $getResults= sqlsrv_query($conn, $tsql, $params, $options);
+    $count=sqlsrv_num_rows($getResults);
+echo $count;*/
     
     if($getResults){
 session_start();
