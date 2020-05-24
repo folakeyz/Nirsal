@@ -12,15 +12,15 @@ $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
     $count=sqlsrv_num_rows($getResults);
     
 }elseif($count == 0){
-     /*echo'<script>
+     echo'<script>
     window.location.href="https://covid19.nmfb.com.ng/";
-    </script>';  */
+    </script>'; 
 }
 
 else{
-    /*  echo'<script>
+    echo'<script>
     window.location.href="https://covid19.nmfb.com.ng/";
-    </script>'; */
+    </script>';
 }
 
 ?>
@@ -130,7 +130,7 @@ Company:  <?=$row['Business Name'];?></b></p><br>
 <p>THIS LOAN AGREEMENT is made the <?=date("Y-M-d");?>  BETWEEN NIRSAL MICROFINANCE BANK LIMITED, a limited liability company incorporated in Nigeria and licensed by the Central Bank of Nigeria as a National Microfinance Bank to carry on the business of Micro financing in Nigeria, and has its registered office at Plot 103/104,No 1, Monrovia Street, Wuse 2, Abuja Nigeria (hereinafter referred to as either ‘the Bank’ or ‘the Lender’ and which expression shall where the context so admits include its successors-in-title and assigns) of the one part,</p>
 <p><b>AND</b>
 
-<p><b class="text-danger"><?=$row['Applicant Name'];?> </b> of …………………………………………………………… ……………………………………………………………(hereinafter referred to as ‘the Borrower’ and which expression shall where the context so admits include his/her personal representatives, heirs and assigns) of the other part; (each ‘a party’ and collectively ‘the parties’).</p>
+<p><b class="text-danger"><?=$row['Applicant Name'];?> </b> of <?=$row['Business Name'];?>(hereinafter referred to as ‘the Borrower’ and which expression shall where the context so admits include his/her personal representatives, heirs and assigns) of the other part; (each ‘a party’ and collectively ‘the parties’).</p>
 
 <b>WHEREAS:</b>
 
