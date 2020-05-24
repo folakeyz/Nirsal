@@ -1,4 +1,29 @@
-<?php require'inc/head.php';?>
+<?php 
+session_start();
+require'inc/head.php';
+
+
+if(isset($_SESSION['bvn'])){
+$bvn =  $_SESSION['bvn'];
+ $tsql= "SELECT * FROM [Targeted Credit Facility (TCF) - Household Loan Application Form] WHERE BVN='$bvn'";
+$params = array();
+$options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
+    $getResults= sqlsrv_query($conn, $tsql, $params, $options);
+    $count=sqlsrv_num_rows($getResults);
+    
+}elseif($count == 0){
+     /*echo'<script>
+    window.location.href="https://covid19.nmfb.com.ng/";
+    </script>';  */
+}
+
+else{
+    /*  echo'<script>
+    window.location.href="https://covid19.nmfb.com.ng/";
+    </script>'; */
+}
+
+?>
 
 
 <div class="navigation">
@@ -6,26 +31,36 @@
 </div>
 <div class="loan-body">
 <div class="col-md-9 mx-auto offer">
+       <?php
+    $row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC) 
+    ?>
     <h4><b>COVID-19 TARGETED CREDIT FACILITY LOAN OFFER LETTER</b></h4>
     <h6>REFERENCE NO: COVID19TCF/NMFB/29042020/ABI001 DATE: 29/04/2020</h6>
 
-<p>Customer Name :(COMPANY NAME)………….</p>
+<p>Customer Name :<?=$row['Applicant Name'];?><br>
 
-<p>Address: COMPANY ADDRESS…………</p>
+COMPANY NAME: <?=$row['Business Name'];?></p>
+
+<p>Address:<?=$row['Home Address'];?></p>
 
 <p>Dear Sir/Ma,</p>
 <p>OFFER OF SME TERM LOAN FACILITY (COVID19 - TCF)</p>
-<p>We refer to your application for an SME Loan facility under the COVID-19 Targeted Credit Facility Intervention Scheme and are pleased to inform you that the Management of NIRSAL Microfinance Bank Ltd (hereinafter referred to as ‘the bank’) has approved the sum of N2,500,000.00(Two Million Five Hundred Thousand Naira and Zero Kobo), subject to the following terms and conditions:</p>
+<p>We refer to your application for an SME Loan facility under the COVID-19 Targeted Credit Facility Intervention Scheme and are pleased to inform you that the Management of NIRSAL Microfinance Bank Ltd (hereinafter referred to as ‘the bank’) has approved the sum of &#x20A6;&nbsp;<?php
+        
+        $num =$row['Loan Amount'];
+         $test=(int)$num;
+        echo number_format($test);
+        ?>, subject to the following terms and conditions:</p>
    
    
-<p><b>BORROWERS NAME: COMPANY NAME</b>
+<p><b>BORROWERS NAME:<?=$row['Business Name'];?></b>
 
 <b>LENDER: NIRSAL Microfinance Bank Ltd</b>
 <b>FACILITY TYPE: COVID-19 SME Targeted Credit Facility</b>
 
 <b>PURPOSE: To Finance Working Capital Requirements</b>
 
-APPROVED LOAN AMOUNT: N2,500,000.00 (Two Million Five Hundred Thousand Naira and Zero Kobo)</p>
+APPROVED LOAN AMOUNT: &#x20A6;&nbsp;<?php                  $num =$row['Loan Amount'];          $test=(int)$num;         echo number_format($test);         ?></p>
    <p><b>INTEREST RATE:</b> 5% per annum (all-in) up till February 28th, 2021(4% one off interest will be deducted on disbursement; 1% p.a to be charged till February 2021)
 
 9% per annum (all-in) effective March 1st, 2021 till maturity (subject to money market condition)</p>
@@ -81,33 +116,34 @@ COLLATERAL: 1. Acceptable 3rd Party Guarantor OR
     </div>
 <div class="col-md-12">
    <p><u>MEMORANDUM OF ACCEPTANCE</u></p> 
-   <p>I, ……………………………………………………… have read this Offer Letter and the loan agreement and fully understand it.</p>
+   <p>I, <?=$row['Applicant Name'];?> have read this Offer Letter and the loan agreement and fully understand it.</p>
 
-  <p>I am pleased to willingly accept the Offer of N2,500,000.00 (Two Million Five Hundred Thousand Naira and Zero Kobo) COVID-19 SME Targeted Credit Facility, along with the Terms and Conditions contained, herein, in the offer letter and the loan agreement dated ………………………….. and signed by me.</p>
-  <p>NAME…………………………………
+  <p>I am pleased to willingly accept the Offer of &#x20A6;&nbsp;<?php                  $num =$row['Loan Amount'];          $test=(int)$num;         echo number_format($test);         ?> COVID-19 SME Targeted Credit Facility, along with the Terms and Conditions contained, herein, in the offer letter and the loan agreement dated <?=date("Y-M-d");?> and signed by me.</p><br>
+  <p><b>NAME: <?=$row['Applicant Name'];?><br>
 
-SIGNATURE…………………………..
+SIGNATURE…………………………..<br>
 
-DATE…………………………………. Company</p>
+DATE: <?=date("Y-M-d");?> <br>
+Company:  <?=$row['Business Name'];?></b></p><br>
 <div class="col-md-12">
 <p>   COVID-19 TCF LOAN AGREEMENT</p>
-<p>THIS LOAN AGREEMENT is made the 29TH day of April, 2020 BETWEEN NIRSAL MICROFINANCE BANK LIMITED, a limited liability company incorporated in Nigeria and licensed by the Central Bank of Nigeria as a National Microfinance Bank to carry on the business of Micro financing in Nigeria, and has its registered office at Plot 103/104,No 1, Monrovia Street, Wuse 2, Abuja Nigeria (hereinafter referred to as either ‘the Bank’ or ‘the Lender’ and which expression shall where the context so admits include its successors-in-title and assigns) of the one part,</p>
+<p>THIS LOAN AGREEMENT is made the <?=date("Y-M-d");?>  BETWEEN NIRSAL MICROFINANCE BANK LIMITED, a limited liability company incorporated in Nigeria and licensed by the Central Bank of Nigeria as a National Microfinance Bank to carry on the business of Micro financing in Nigeria, and has its registered office at Plot 103/104,No 1, Monrovia Street, Wuse 2, Abuja Nigeria (hereinafter referred to as either ‘the Bank’ or ‘the Lender’ and which expression shall where the context so admits include its successors-in-title and assigns) of the one part,</p>
 <p><b>AND</b>
 
-<p><b class="text-danger">NEBO UGOCHUKWU E</b> of …………………………………………………………… ……………………………………………………………(hereinafter referred to as ‘the Borrower’ and which expression shall where the context so admits include his/her personal representatives, heirs and assigns) of the other part; (each ‘a party’ and collectively ‘the parties’).</p>
+<p><b class="text-danger"><?=$row['Applicant Name'];?> </b> of …………………………………………………………… ……………………………………………………………(hereinafter referred to as ‘the Borrower’ and which expression shall where the context so admits include his/her personal representatives, heirs and assigns) of the other part; (each ‘a party’ and collectively ‘the parties’).</p>
 
 <b>WHEREAS:</b>
 
 <p>a. The Borrower applied for loan facility under the COVID-19 Targeted Credit Facility (COVID-19 TCF), in accordance with the provisions of the Central Bank of Nigeria (CBN) Guidelines for the operation of COVID-19 TCF (hereafter referred to as ‘the Guidelines’).</p>
 
-<p>b. Sequel to the Borrower’s aforesaid application, the Bank offered the Borrower a Term loan facility of <b class="text-danger">N2,500,000.00(Two Million Five Hundred Thousand Naira and Zero Kobo)</b> vide a letter titled <b>‘OFFER OF SME TERM LOAN FACILITY ‘(COVID-19 TCF)’</b> and dated 29TH April, 2020, on the terms and conditions specified therein.</p>
+<p>b. Sequel to the Borrower’s aforesaid application, the Bank offered the Borrower a Term loan facility of <b class="text-danger">&#x20A6;&nbsp;<?php                  $num =$row['Loan Amount'];          $test=(int)$num;         echo number_format($test);         ?></b> vide a letter titled <b>‘OFFER OF SME TERM LOAN FACILITY ‘(COVID-19 TCF)’</b> and dated 29TH April, 2020, on the terms and conditions specified therein.</p>
 
 <p>c. The Borrower has accepted the Bank’s offer of the term loan facility, consequent upon which the parties agreed to execute this Loan Agreement on the terms and conditions herein contained.</p>
 
 <p>Now this <b>LOAN AGREEMENT WITNESSES</b> as follows</p>
 <p>1. The COVID-19 Targeted Credit Facility<br>
 
-Subject to the terms and conditions of this Loan Agreement, the Bank hereby agrees to make available to the Borrower a Term loan facility of <b>N2,500,000.00(Two Million Five Hundred Thousand Naira and Zero Kobo), pursuant to the Borrower’s application for a COVID-19 TCF.</b></p>
+Subject to the terms and conditions of this Loan Agreement, the Bank hereby agrees to make available to the Borrower a Term loan facility of <b>&#x20A6;&nbsp;<?php                  $num =$row['Loan Amount'];          $test=(int)$num;         echo number_format($test);         ?>, pursuant to the Borrower’s application for a COVID-19 TCF.</b></p>
     <p><b>1. Repayment</b></p>
 
 <p>Subject to the provisions hereunder, the Borrower shall repay the principal of the Loan in full, plus all accrued and unpaid interest thereon and all other outstanding Obligations.</p>
@@ -279,8 +315,8 @@ The Borrower hereby exonerates the Bank from any liability that may arise as a r
     <p><b>SIGNED AND DELIVERED </b>by the
 
 Within named Borrower</p>
-<p>________________________________</p>
-<form>
+<p><?=$row['Applicant Name'];?></p>
+<form method="post">
     <div class="form-group col-md-1 float-left">
         <input type="checkbox" name="check" required>
     </div>
@@ -293,12 +329,7 @@ Within named Borrower</p>
 </form>
 </div>
 </div>
-
-
 </div>
-
-
-
 </div>
 
 
