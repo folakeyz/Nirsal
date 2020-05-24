@@ -9,15 +9,15 @@ $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
     $count=sqlsrv_num_rows($getResults);
     
 }elseif($count == 0){
-       echo'<script>
+     echo'<script>
     window.location.href="https://covid19.nmfb.com.ng/";
-    </script>'; 
+    </script>';  
 }
 
 else{
-       echo'<script>
+      echo'<script>
     window.location.href="https://covid19.nmfb.com.ng/";
-    </script>';
+    </script>'; 
 }
     
 
@@ -27,7 +27,7 @@ else{
 </div>
 <div class="loan-body">
     <?php
-    while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
+    $row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC) 
     ?>
     <h3 class="text-success text-center"><b>WELCOME&nbsp;&nbsp;<?=$row['Applicant Name'];?></b> </h3>
    
@@ -63,7 +63,7 @@ else{
            <input type="submit" class="btn btn-success btn-block" value="Proceed" name="submit" required>
        </div> 
 </div>
-    <?php } ?>
+ 
     </form>
         
 </div>  
