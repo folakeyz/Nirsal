@@ -20,9 +20,8 @@ session_destroy();
          }, 5000);
          </script>';
     }else{
-       echo '<script> 
-        swal("Error!", "An Error Occured Please Try again!", "error"); 
+        echo '<script> 
+        swal("Warning!", "An Error Occured, Please Try Again", "error"); 
          </script>';
-    }else{  
     }
 }
