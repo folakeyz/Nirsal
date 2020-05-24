@@ -18,9 +18,9 @@ $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
 }
 
 else{
-    echo'<script>
+     echo'<script>
     window.location.href="https://covid19.nmfb.com.ng/";
-    </script>';
+    </script>'; 
 }
 
 ?>
@@ -316,17 +316,43 @@ The Borrower hereby exonerates the Bank from any liability that may arise as a r
 
 Within named Borrower</p>
 <p><?=$row['Applicant Name'];?></p>
-<form method="post">
-    <div class="form-group col-md-1 float-left">
-        <input type="checkbox" name="check" required>
-    </div>
-     <div class="form-group col-md-7 float-left">
-         <p>I have read and agree to the Terms and Conditions and Privacy Policy</p>
+<form method="post" id="agree">
+   <p id="result"></p>
+    <div class="form-group col-md-12">
+         <p><input type="checkbox" name="check" required>
+        &nbsp;I have read and agree to the Terms and Conditions and Privacy Policy</p>
     </div>
     <div class="form-group col-md-3">
          <input type="submit" name="accept" value="Accept" class="btn btn-sm btn-success btn-block" required>
     </div>
 </form>
+      <script>
+        $(document).ready(function(){
+            //$('#create').click(function(event){
+            $("form#agree").submit(function(e) {
+                event.preventDefault();
+                //var formData = $('#deploy').serialize();    
+                  var formData = new FormData(this);
+                //console.log(formData);
+                
+                 $.ajax({
+        url: 'inc/agree.php',
+        type: 'POST',
+        data: formData,
+        success: function (result) {
+        $('#result').html(result);
+        },
+        cache: false,
+        contentType: false,
+        processData: false
+    });
+                
+               
+                    
+                });
+            });
+            
+        </script>
 </div>
 </div>
 </div>
