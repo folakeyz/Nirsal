@@ -7,14 +7,7 @@ if(isset($_POST)){
  echo $bvn = filter_input(INPUT_POST, 'bvn', FILTER_SANITIZE_STRING);
     
  $tsql= "UPDATE GuarantorsForms SET ApplicantBankNames='$bname', ApplicantAccountNumbers='$bnumber' WHERE ApplicantBvn='$bvn'";
- //$params = array($bname, $bnumber);
  $getResults= sqlsrv_query($conn, $tsql);
-  /* $tsql= "SELECT * FROM GuarantorsForm WHERE ApplicantBvn='$ApplicantBvnbvn'";
-$params = array();
-$options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
-    $getResults= sqlsrv_query($conn, $tsql, $params, $options);
-    $count=sqlsrv_num_rows($getResults);
-echo $count;*/
     
     if($getResults){
 session_start();
