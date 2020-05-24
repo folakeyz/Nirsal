@@ -72,7 +72,7 @@ else{
                 //console.log(formData);
                 
                  $.ajax({
-        url: 'inc/bank_update',
+        url: 'inc/bank_update.php',
         type: 'POST',
         data: formData,
         success: function (result) {
