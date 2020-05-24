@@ -2,11 +2,11 @@
 require'dbh.inc.php';
 if(isset($_POST)){
     
-$bname = filter_input(INPUT_POST, 'bname', FILTER_SANITIZE_STRING);
-$bnumber = filter_input(INPUT_POST, 'bnumber', FILTER_SANITIZE_STRING);
-$bvn = filter_input(INPUT_POST, 'bvn', FILTER_SANITIZE_STRING);
+echo $bname = filter_input(INPUT_POST, 'bname', FILTER_SANITIZE_STRING);
+echo $bnumber = filter_input(INPUT_POST, 'bnumber', FILTER_SANITIZE_STRING);
+echo $bvn = filter_input(INPUT_POST, 'bvn', FILTER_SANITIZE_STRING);
     
- $tsql= "UPDATE GuarantorsForm SET ApplicantBankNames=(?), ApplicantAccountNumbers=(?) WHERE ApplicantBvn='$bvn'";
+ /*$tsql= "UPDATE GuarantorsForm SET ApplicantBankNames=(?), ApplicantAccountNumbers=(?) WHERE ApplicantBvn='$bvn'";
  $params = array($bname, $bnumber);
  $getResults= sqlsrv_query($conn, $tsql, $params);
 
@@ -25,5 +25,5 @@ session_destroy();
         echo '<script> 
         swal("Warning!", "An Error Occured, Please Try Again", "error"); 
          </script>';
-    }
+    }*/
 }
