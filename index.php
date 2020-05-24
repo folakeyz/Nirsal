@@ -28,7 +28,7 @@
                 //console.log(formData);
                 
                  $.ajax({
-        url: 'inc/validation',
+        url: 'inc/validation.php',
         type: 'POST',
         data: formData,
         success: function (result) {
