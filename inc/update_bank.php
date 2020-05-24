@@ -6,9 +6,9 @@ if(isset($_POST)){
  $bnumber = filter_input(INPUT_POST, 'bnumber', FILTER_SANITIZE_STRING);
  $bvn = filter_input(INPUT_POST, 'bvn', FILTER_SANITIZE_STRING);
     
- $tsql= "UPDATE GuarantorsForm SET ApplicantBankNames=(?), ApplicantAccountNumbers=(?) WHERE ApplicantBvn='$bvn'";
- $params = array($bname, $bnumber);
- $getResults= sqlsrv_query($conn, $tsql, $params);
+ $tsql= "UPDATE GuarantorsForm SET ApplicantBankNames='$bname', ApplicantAccountNumbers='$bnumber' WHERE ApplicantBvn='$bvn'";
+ //$params = array($bname, $bnumber);
+ $getResults= sqlsrv_query($conn, $tsql);
 
     
     if($getResults){
