@@ -38,8 +38,7 @@ else{
     <h6>REFERENCE NO: COVID19TCF/NMFB/29042020/ABI001 DATE: 29/04/2020</h6>
 
 <p>Customer Name :<?=$row['Applicant Name'];?><br>
-
-COMPANY NAME: <?=$row['Business Name'];?></p>
+</p>
 
 <p>Address:<?=$row['Home Address'];?></p>
 
