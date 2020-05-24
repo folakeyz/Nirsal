@@ -1,7 +1,10 @@
-<?php require'inc/head.php';
+<?php 
+session_start();
+require'inc/head.php';
 
 if(isset($_GET['id'])){
 $bvn = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING);  
+$_SESSION['bvn']=$bvn;
  $tsql= "SELECT * FROM [Targeted Credit Facility (TCF) - Household Loan Application Form] WHERE BVN='$bvn'";
 $params = array();
 $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
@@ -15,7 +18,7 @@ $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
 }
 
 else{
-      echo'<script>
+    echo'<script>
     window.location.href="https://covid19.nmfb.com.ng/";
     </script>'; 
 }
@@ -38,7 +41,7 @@ else{
      <small>Guarantor's Info</small><hr>
                     <div class="col-md-4 form-group float-left">
            <label>Applicant's Name</label>
-           <input type="text" class="form-control" value="<?=$row['Applicant Name'];?>" name="gfname" required>
+           <input type="text" class="form-control" value="<?=$row['Applicant Name'];?>" readonly>
        </div>   
         
        <div class="col-md-4 form-group float-left">
@@ -48,19 +51,19 @@ else{
         $num =$row['Loan Amount'];
          $test=(int)$num;
         echo number_format($test);
-        ?>" name="gmobile" required>
+        ?>" name="gmobile" readonly>
        </div> 
        <div class="col-md-4 form-group float-left">
            <label>Loan Tenor</label>
-           <input type="text" class="form-control" value="<?=$row['Approved Loan Tenor'];?>" name="gemail" >
+           <input type="text" class="form-control" value="<?=$row['Approved Loan Tenor'];?>" readonly>
        </div> 
         <div class="col-md-4 form-group float-left">
            <label>Loan Moratorium</label>
-           <input type="text" class="form-control" value="<?=$row['Approved Loan Moratorium'];?>" name="bvn" required>
+           <input type="text" class="form-control" value="<?=$row['Approved Loan Moratorium'];?>" readonly>
        </div> 
         <div class="col-md-4 form-group float-left">
         <br>
-           <input type="submit" class="btn btn-success btn-block" value="Proceed" name="submit" required>
+            <a class="btn btn-success btn-block" href="offer_and_aggrement.php">Proceed</a>
        </div> 
 </div>
  
