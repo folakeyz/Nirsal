@@ -30,6 +30,7 @@ else{
 </div>
 <div class="loan-body">
 <div class="transfer" id="transfer">
+ <p id="result"></p>
     <form method="post" id="update">
         <h4 class="text-success"><b>Enter Bank and Account Number</b></h4><hr> 
        <div class="form-group col-md-6">
