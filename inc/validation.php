@@ -16,7 +16,7 @@ $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
     if($count == 1){
           echo '<script> 
         swal("Success!", "Available!", "success"); 
-        window.location.href="loan?user='.$user.'&id='.$bvn.'";
+        window.location.href="loan.php?user='.$user.'&id='.$bvn.'";
          </script>';
     
     }else{
