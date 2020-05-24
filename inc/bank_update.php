@@ -6,8 +6,7 @@ $status = filter_input(INPUT_POST, 'status', FILTER_SANITIZE_STRING);
     
     if($status == "Yes"){
         echo'<script>
-        $("#transfer").addClass("active");
-        $("#btransfer").addClass("active");
+       window.location.href="bank_update.php";
         </script>';
     }
 }
