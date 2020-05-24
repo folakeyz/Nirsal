@@ -5,7 +5,7 @@ require'inc/head.php';
 
 if(isset($_SESSION['bvn'])){
 $bvn =  $_SESSION['bvn'];
- $tsql= "SELECT * FROM [Targeted Credit Facility (TCF) - Household Loan Application Form] WHERE BVN='$bvn'";
+$tsql= "SELECT * FROM [SME Loan Application Form] WHERE [Director's BVN]='$bvn' OR [Promoter's BVN]='$bvn'";
 $params = array();
 $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
     $getResults= sqlsrv_query($conn, $tsql, $params, $options);
@@ -37,9 +37,8 @@ else{
     <h4><b>COVID-19 TARGETED CREDIT FACILITY LOAN OFFER LETTER</b></h4>
     <h6>REFERENCE NO: COVID19TCF/NMFB/29042020/ABI001 DATE: 29/04/2020</h6>
 
-<p>Customer Name :<?=$row['Applicant Name'];?><br>
 
-COMPANY NAME: <?=$row['Business Name'];?></p>
+COMPANY NAME: <?=$row['Business/Company Name'];?></p>
 
 <p>Address:<?=$row['Home Address'];?></p>
 
@@ -53,7 +52,7 @@ COMPANY NAME: <?=$row['Business Name'];?></p>
         ?>, subject to the following terms and conditions:</p>
    
    
-<p><b>BORROWERS NAME:<?=$row['Business Name'];?></b>
+<p><b>BORROWERS NAME: <?=$row['Business/Company Name'];?></b>
 
 <b>LENDER: NIRSAL Microfinance Bank Ltd</b>
 <b>FACILITY TYPE: COVID-19 SME Targeted Credit Facility</b>
@@ -116,21 +115,21 @@ COLLATERAL: 1. Acceptable 3rd Party Guarantor OR
     </div>
 <div class="col-md-12">
    <p><u>MEMORANDUM OF ACCEPTANCE</u></p> 
-   <p>I, <?=$row['Applicant Name'];?> have read this Offer Letter and the loan agreement and fully understand it.</p>
+   <p>I,  <?=$row['Business/Company Name'];?> have read this Offer Letter and the loan agreement and fully understand it.</p>
 
   <p>I am pleased to willingly accept the Offer of &#x20A6;&nbsp;<?php                  $num =$row['Loan Amount'];          $test=(int)$num;         echo number_format($test);         ?> COVID-19 SME Targeted Credit Facility, along with the Terms and Conditions contained, herein, in the offer letter and the loan agreement dated <?=date("Y-M-d");?> and signed by me.</p><br>
-  <p><b>NAME: <?=$row['Applicant Name'];?><br>
+  <p><b>NAME:  <?=$row['Business/Company Name'];?><br>
 
 SIGNATURE…………………………..<br>
 
 DATE: <?=date("Y-M-d");?> <br>
-Company:  <?=$row['Business Name'];?></b></p><br>
+Company:   <?=$row['Business/Company Name'];?></b></p><br>
 <div class="col-md-12">
 <p>   COVID-19 TCF LOAN AGREEMENT</p>
 <p>THIS LOAN AGREEMENT is made the <?=date("Y-M-d");?>  BETWEEN NIRSAL MICROFINANCE BANK LIMITED, a limited liability company incorporated in Nigeria and licensed by the Central Bank of Nigeria as a National Microfinance Bank to carry on the business of Micro financing in Nigeria, and has its registered office at Plot 103/104,No 1, Monrovia Street, Wuse 2, Abuja Nigeria (hereinafter referred to as either ‘the Bank’ or ‘the Lender’ and which expression shall where the context so admits include its successors-in-title and assigns) of the one part,</p>
 <p><b>AND</b>
 
-<p><b class="text-danger"><?=$row['Applicant Name'];?> </b> of <?=$row['Business Name'];?>(hereinafter referred to as ‘the Borrower’ and which expression shall where the context so admits include his/her personal representatives, heirs and assigns) of the other part; (each ‘a party’ and collectively ‘the parties’).</p>
+<p><b class="text-danger"> <?=$row['Business/Company Name'];?> </b> of  <?=$row['Business/Company Name'];?>(hereinafter referred to as ‘the Borrower’ and which expression shall where the context so admits include his/her personal representatives, heirs and assigns) of the other part; (each ‘a party’ and collectively ‘the parties’).</p>
 
 <b>WHEREAS:</b>
 
@@ -315,7 +314,7 @@ The Borrower hereby exonerates the Bank from any liability that may arise as a r
     <p><b>SIGNED AND DELIVERED </b>by the
 
 Within named Borrower</p>
-<p><?=$row['Applicant Name'];?></p>
+<p> <?=$row['Business/Company Name'];?></p>
 <form method="post" id="agree">
    <p id="result"></p>
     <div class="form-group col-md-12">
