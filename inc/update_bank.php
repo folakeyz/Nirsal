@@ -19,5 +19,10 @@ session_destroy();
             window.location.href = "https://https://covid19.nmfb.com.ng/";
          }, 5000);
          </script>';
+    }else{
+       echo '<script> 
+        swal("Error!", "An Error Occured Please Try again!", "error"); 
+         </script>';
+    }else{  
     }
 }
