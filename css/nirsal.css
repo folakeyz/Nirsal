@@ -3,10 +3,17 @@ body{width: 100%;margin: 0;padding: 0;font-family: 'Roboto','sans-serif';}
 .navigation img{width: 7%;}
 .form-body{width: 100%;height: 90vh;padding: 30px;background: url(../img/1354.jpg)no-repeat;background-size: cover;background-position: right}
 .landing{width: 100%;height: 90vh;padding: 0px;background: url(../img/untitled.svg)no-repeat;background-size: cover;background-position: right;padding-top: 0;}
-.loan-body{width: 100%;height: 90vh;background:url(../img/1354.jpg)}
+.loan-body{width: 100%;height: 90vh;padding: 30px;}
 .curved{border-radius: 30px;}
 .curved:hover{background: white;color: forestgreen;}
 .form-body input::placeholder{font-size: 11px;}
 .loan-body input{font-size: 11px;}
 .loan-body label{font-size: 11px;}
 .con-right{float: right;background: ;padding: 50px;}
+.guarantor{padding: 30px;}
+.offer p{font-size: 13px;text-align: justify;}
+.offer{height: 500px;overflow: scroll;}
+.transfer{width: 100%;height: 80vh;padding: 30px;background: url(../img/5553.jpg)no-repeat;background-size: contain;background-position: right;}
+.transfer.active{display: none;}
+.btransfer{width: 100%;height: 80vh;padding: 30px;background: url(../img/5553.jpg)no-repeat;background-size: contain;background-position: right;display: none;}
+.btransfer.active{display: block;}
