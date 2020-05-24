@@ -1,4 +1,28 @@
-<?php require'inc/head.php';?>
+<?php 
+session_start();
+require'inc/head.php';
+
+if(isset($_SESSION['bvn'])){
+$bvn =  $_SESSION['bvn'];
+ $tsql= "SELECT * FROM [Targeted Credit Facility (TCF) - Household Loan Application Form] WHERE BVN='$bvn'";
+$params = array();
+$options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
+    $getResults= sqlsrv_query($conn, $tsql, $params, $options);
+    $count=sqlsrv_num_rows($getResults);
+    
+}elseif($count == 0){
+     echo'<script>
+    window.location.href="https://covid19.nmfb.com.ng/";
+    </script>';  
+}
+
+else{
+     echo'<script>
+    window.location.href="https://covid19.nmfb.com.ng/";
+    </script>'; 
+}
+    
+?>
 
 
 <div class="navigation">
@@ -15,6 +39,7 @@
         <div class="form-group col-md-6">
        <label>Account Number</label>
        <input type="text" name="bnumber" class="form-control" value=""> 
+       <input type="hidden" name="bvn" class="form-control" value="<?=$bvn;?>"> 
         </div> 
         <div class="form-group col-md-6">
 <input type="submit" name="submit" class="btn btn-success" value="Submit"> 
