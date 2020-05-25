@@ -11,15 +11,15 @@ $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
     $count=sqlsrv_num_rows($getResults);
     
 }elseif($count == 0){
-     /*echo'<script>
+     echo'<script>
     window.location.href="https://covid19.nmfb.com.ng/";
-    </script>';  */
+    </script>';  
 }
 
 else{
-    /*  echo'<script>
+      echo'<script>
     window.location.href="https://covid19.nmfb.com.ng/";
-    </script>'; */
+    </script>'; 
 }
     
 
@@ -47,7 +47,7 @@ else{
            <label>Approved Loan Amount</label>
            <input type="text" class="form-control" value="&#x20A6;&nbsp;<?php
         
-        $num =$row['Loan Amount'];
+        $num =$row['Approved Loan Amount'];
          $test=(int)$num;
         echo number_format($test);
         ?>" name="gmobile" readonly>
