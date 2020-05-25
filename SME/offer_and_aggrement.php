@@ -318,6 +318,7 @@ Within named Borrower</p>
 <form method="post" id="agree">
    <p id="result"></p>
     <div class="form-group col-md-12">
+        <input type="hidden" name="bvn" value="<?=$_SESSION['bvn'];?>">
          <p><input type="checkbox" name="check" required>
         &nbsp;I have read and agree to the Terms and Conditions and Privacy Policy</p>
     </div>
