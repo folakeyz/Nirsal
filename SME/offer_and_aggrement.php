@@ -5,7 +5,7 @@ require'inc/head.php';
 
 if(isset($_SESSION['bvn'])){
 $bvn =  $_SESSION['bvn'];
-$tsql= "SELECT * FROM [SME Loan Application Form] WHERE [Director's BVN]='$bvn' OR [Promoter's BVN]='$bvn'";
+$tsql= "SELECT * FROM [SME Loan Application Form] WHERE [Director's BVN]='$bvn' OR [Promoter's BVN]='$bvn' AND [ApprovalStatus]='APPROVED'";
 $params = array();
 $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
     $getResults= sqlsrv_query($conn, $tsql, $params, $options);
