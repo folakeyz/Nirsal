@@ -12,7 +12,7 @@ $getResults= sqlsrv_query($conn, $tsql);
         </script>';
         }else{
            echo'<script>
-      swal("Warning!", "An Error Occured, Please Try again!", "warning");
+      swal("Warning!", "An Error Occured,'.$bvn.'Please Try again!", "warning");
         </script>';      
         }
     
