@@ -12,15 +12,15 @@ $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
     $count=sqlsrv_num_rows($getResults);
     
 }elseif($count == 0){
-     /*echo'<script>
+     echo'<script>
     window.location.href="https://covid19.nmfb.com.ng/";
-    </script>';  */
+    </script>';  
 }
 
 else{
-    /*  echo'<script>
+      echo'<script>
     window.location.href="https://covid19.nmfb.com.ng/";
-    </script>'; */
+    </script>'; 
 }
 
 ?>
@@ -341,7 +341,7 @@ session_destroy();
          
          ?>
      
-     <a class="btn btn-sm btn-success btn-block" href="offer_and_aggrement.php?reject=Yes">Reject</a>
+     <a class="btn btn-sm btn-danger btn-block" href="offer_and_aggrement.php?reject=Yes">Reject</a>
      
     </div>
 </form>
