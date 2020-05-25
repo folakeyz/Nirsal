@@ -354,7 +354,7 @@ $getResults= sqlsrv_query($conn, $tsql);
      
      <a class="btn btn-sm btn-danger btn-block" href="offer_and_aggrement.php?reject=<?=$_SESSION['bvn'];?>">Reject</a>
      
-     <a class="btn btn-sm btn-danger btn-block" href="inc/agree.php?reject=Yes">Reject</a>
+
      
     </div>
 </form>
