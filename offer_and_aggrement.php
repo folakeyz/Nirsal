@@ -331,7 +331,7 @@ Within named Borrower</p>
 session_unset();
 session_destroy();
          echo '<script> 
-        swal("Success!", "You have rejected the Terms and Conditions!", "sucess"); 
+        swal("Error!", "You have rejected the Terms and Conditions!", "error"); 
         setTimeout(function(){
             window.location.href = "https://https://covid19.nmfb.com.ng/";
          }, 5000);
@@ -341,7 +341,7 @@ session_destroy();
          
          ?>
      
-     <a class="btn btn-sm btn-success btn-block" href="offer_and_aggrement.php?reject=Yes">Reject</a>
+     <a class="btn btn-sm btn-danger btn-block" href="offer_and_aggrement.php?reject=Yes">Reject</a>
      
     </div>
 </form>
