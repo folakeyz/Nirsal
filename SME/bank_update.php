@@ -11,15 +11,15 @@ $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
     $count=sqlsrv_num_rows($getResults);
     
 }elseif($count == 0){
-     /*echo'<script>
+     echo'<script>
     window.location.href="https://covid19.nmfb.com.ng/";
-    </script>';  */
+    </script>';  
 }
 
 else{
-    /*  echo'<script>
+     echo'<script>
     window.location.href="https://covid19.nmfb.com.ng/";
-    </script>'; */
+    </script>'; 
 }
     
 ?>
@@ -30,7 +30,7 @@ else{
 </div>
 <div class="loan-body">
 <div class="transfer" id="transfer">
-    <form method="post">
+    <form method="post" id="update">
         <h4 class="text-success"><b>Enter Bank and Account Number</b></h4><hr> 
        <div class="form-group col-md-6">
        <label>Bank Name</label>
@@ -48,14 +48,14 @@ else{
       <script>
         $(document).ready(function(){
             //$('#create').click(function(event){
-            $("form#val").submit(function(e) {
+            $("form#update").submit(function(e) {
                 event.preventDefault();
                 //var formData = $('#deploy').serialize();    
                   var formData = new FormData(this);
                 //console.log(formData);
                 
                  $.ajax({
-        url: 'inc/update_bank',
+        url: 'inc/update_bank.php',
         type: 'POST',
         data: formData,
         success: function (result) {
