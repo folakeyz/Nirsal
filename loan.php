@@ -68,7 +68,7 @@ else{
  
     </form>
  <div class="col-md-8 mx-auto">
-     <img src="img/covid.jpg" alt="Covid-19" width="100%">   
+     <img src="img/covid.jpg" alt="Covid-19" width="500%">   
  </div>
 </div>  
 
