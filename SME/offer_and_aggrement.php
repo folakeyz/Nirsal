@@ -325,14 +325,14 @@ Within named Borrower</p>
          <input type="submit" name="accept" value="Accept" class="btn btn-sm btn-success btn-block" required>
     </div>
          <div class="form-group col-md-3">
-     <?php
+<?php
         if(isset($_GET['reject'])){
      session_start();
 session_unset();
 session_destroy();
             $agree="Rejected";
         $bvn = $_GET['reject'];
-        $tsql= "UPDATE [SmeGuarantors] SET Decision='$agree' WHERE ApplicantBvn='$bvn'";
+        $tsql= "UPDATE [GuarantorsForms] SET Decision='$agree' WHERE ApplicantBvn='$bvn'";
 $getResults= sqlsrv_query($conn, $tsql);
          echo '<script> 
         swal("Error!", "You have rejected the Terms and Conditions!", "error"); 
