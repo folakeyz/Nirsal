@@ -35,7 +35,7 @@ else{
 <div class="loan-body">
 <div class="transfer" id="transfer">
   <form method="post" id="val">
-    <h4 class="text-success"><b>Would you like to transfer your Loan to another Bank</b></h4><hr>
+    <h4 class="text-success"><b>Would you like to transfer the money to another Bank</b></h4><hr>
     <p id="result"></p>
 <div class="form-group col-md-6">
  <p class="text-success"><input type="radio" name="status" value="Yes" required> Yes </p>  
