@@ -331,23 +331,9 @@ Within named Borrower</p>
          <input type="submit" name="accept" value="Accept" class="btn btn-sm btn-success btn-block" required>
  </div>
         <div class="form-group col-md-3">
-     <?php
-        if(isset($_GET['reject'])){
-     session_start();
-session_unset();
-session_destroy();
-         echo '<script> 
-        swal("Error!", "You have rejected the Terms and Conditions!", "error"); 
-        setTimeout(function(){
-            window.location.href = "https://covid19.nmfb.com.ng/";
-         }, 5000);
-         </script>';
-    
-} 
-         
-         ?>
+
      
-     <a class="btn btn-sm btn-danger btn-block" href="offer_and_aggrement.php?reject=Yes">Reject</a>
+     <a class="btn btn-sm btn-danger btn-block" href="inc/agree.php?reject=Yes">Reject</a>
      
     </div>
 </form>
