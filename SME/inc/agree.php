@@ -21,6 +21,10 @@ $getResults= sqlsrv_query($conn, $tsql);
 
 
         if(isset($_GET['reject'])){
+                       $agree="Accepted";
+        $bvn = $_GET['bvn'];
+        $tsql= "UPDATE [SmeGuarantors] SET Decision='$agree' WHERE ApplicantBvn='$bvn'";
+$getResults= sqlsrv_query($conn, $tsql);
      session_start();
 session_unset();
 session_destroy();
