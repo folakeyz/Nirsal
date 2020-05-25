@@ -324,6 +324,7 @@ Within named Borrower</p>
 <form method="post" id="agree">
    <p id="result"></p>
     <div class="form-group col-md-12">
+     <input type="hidden" name="bvn" value="<?=$_SESSION['bvn'];?>">
          <p><input type="checkbox" name="check" required>
         &nbsp;I have read and agree to the Terms and Conditions, Acceptance of this offer and agreement is subject to the Guarantor’s consent.</p>
     </div>
@@ -331,7 +332,27 @@ Within named Borrower</p>
          <input type="submit" name="accept" value="Accept" class="btn btn-sm btn-success btn-block" required>
  </div>
         <div class="form-group col-md-3">
-
+<?php
+        if(isset($_GET['reject'])){
+     session_start();
+session_unset();
+session_destroy();
+            $agree="Rejected";
+        $bvn = $_GET['reject'];
+        $tsql= "UPDATE [GuarantorsForms] SET Decision='$agree' WHERE ApplicantBvn='$bvn'";
+$getResults= sqlsrv_query($conn, $tsql);
+         echo '<script> 
+        swal("Error!", "You have rejected the Terms and Conditions!", "error"); 
+        setTimeout(function(){
+            window.location.href = "https://covid19.nmfb.com.ng/";
+         }, 5000);
+         </script>';
+    
+} 
+         
+         ?>
+     
+     <a class="btn btn-sm btn-danger btn-block" href="offer_and_aggrement.php?reject=<?=$_SESSION['bvn'];?>">Reject</a>
      
      <a class="btn btn-sm btn-danger btn-block" href="inc/agree.php?reject=Yes">Reject</a>
      
