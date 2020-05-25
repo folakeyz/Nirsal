@@ -67,7 +67,7 @@ else{
 </div>
  
     </form>
-        
+     <img src="img/covid.jpg" alt="Covid-19" width="80">   
 </div>  
 
 <?php require'inc/footer.php';?>
