@@ -319,7 +319,7 @@ Within named Borrower</p>
     <div class="form-group col-md-12">
         <input type="hidden" name="bvn" value="<?=$_SESSION['bvn'];?>">
          <p><input type="checkbox" name="check" required>
-        &nbsp;I have read and agree to the Terms and Conditions and Privacy Policy</p>
+        &nbsp;I have read and agree to the Terms and Conditions, Acceptance of this offer and agreement is subject to the Guarantor’s consent</p>
     </div>
     <div class="form-group col-md-3">
          <input type="submit" name="accept" value="Accept" class="btn btn-sm btn-success btn-block" required>
