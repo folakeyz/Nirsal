@@ -52,7 +52,7 @@ else{
 <p>OFFER OF SME TERM LOAN FACILITY (COVID19 - TCF)</p>
 <p>We refer to your application for an SME Loan facility under the COVID-19 Targeted Credit Facility Intervention Scheme and are pleased to inform you that the Management of NIRSAL Microfinance Bank Ltd (hereinafter referred to as ‘the bank’) has approved the sum of &#x20A6;&nbsp;<?php
         
-        $num =$row['Loan Amount'];
+        $num =$row['Approved Loan Amount'];
          $test=(int)$num;
         echo number_format($test);
         ?>, subject to the following terms and conditions:</p>
@@ -65,7 +65,7 @@ else{
 
 <b>PURPOSE: To Finance Working Capital Requirements</b>
 
-APPROVED LOAN AMOUNT: &#x20A6;&nbsp;<?php                  $num =$row['Loan Amount'];          $test=(int)$num;         echo number_format($test);         ?></p>
+APPROVED LOAN AMOUNT: &#x20A6;&nbsp;<?php                  $num =$row['Approved Loan Amount'];          $test=(int)$num;         echo number_format($test);         ?></p>
    <p><b>INTEREST RATE:</b> 5% per annum (all-in) up till February 28th, 2021(4% one off interest will be deducted on disbursement; 1% p.a to be charged till February 2021)
 
 9% per annum (all-in) effective March 1st, 2021 till maturity (subject to money market condition)</p>
@@ -123,7 +123,7 @@ COLLATERAL: 1. Acceptable 3rd Party Guarantor OR
    <p><u>MEMORANDUM OF ACCEPTANCE</u></p> 
    <p>I, <?=$row['Applicant Name'];?> have read this Offer Letter and the loan agreement and fully understand it.</p>
 
-  <p>I am pleased to willingly accept the Offer of &#x20A6;&nbsp;<?php                  $num =$row['Loan Amount'];          $test=(int)$num;         echo number_format($test);         ?> COVID-19 SME Targeted Credit Facility, along with the Terms and Conditions contained, herein, in the offer letter and the loan agreement dated <?=date("Y-M-d");?> and signed by me.</p><br>
+  <p>I am pleased to willingly accept the Offer of &#x20A6;&nbsp;<?php                  $num =$row['Approved Loan Amount'];          $test=(int)$num;         echo number_format($test);         ?> COVID-19 SME Targeted Credit Facility, along with the Terms and Conditions contained, herein, in the offer letter and the loan agreement dated <?=date("Y-M-d");?> and signed by me.</p><br>
   <p><b>NAME: <?=$row['Applicant Name'];?><br>
 
 SIGNATURE…………………………..<br>
@@ -141,14 +141,14 @@ Company:  <?=$row['Business Name'];?></b></p><br>
 
 <p>a. The Borrower applied for loan facility under the COVID-19 Targeted Credit Facility (COVID-19 TCF), in accordance with the provisions of the Central Bank of Nigeria (CBN) Guidelines for the operation of COVID-19 TCF (hereafter referred to as ‘the Guidelines’).</p>
 
-<p>b. Sequel to the Borrower’s aforesaid application, the Bank offered the Borrower a Term loan facility of <b class="text-danger">&#x20A6;&nbsp;<?php                  $num =$row['Loan Amount'];          $test=(int)$num;         echo number_format($test);         ?></b> vide a letter titled <b>‘OFFER OF SME TERM LOAN FACILITY ‘(COVID-19 TCF)’</b> and dated 29TH April, 2020, on the terms and conditions specified therein.</p>
+<p>b. Sequel to the Borrower’s aforesaid application, the Bank offered the Borrower a Term loan facility of <b class="text-danger">&#x20A6;&nbsp;<?php                  $num =$row['Approved Loan Amount'];          $test=(int)$num;         echo number_format($test);         ?></b> vide a letter titled <b>‘OFFER OF SME TERM LOAN FACILITY ‘(COVID-19 TCF)’</b> and dated 29TH April, 2020, on the terms and conditions specified therein.</p>
 
 <p>c. The Borrower has accepted the Bank’s offer of the term loan facility, consequent upon which the parties agreed to execute this Loan Agreement on the terms and conditions herein contained.</p>
 
 <p>Now this <b>LOAN AGREEMENT WITNESSES</b> as follows</p>
 <p>1. The COVID-19 Targeted Credit Facility<br>
 
-Subject to the terms and conditions of this Loan Agreement, the Bank hereby agrees to make available to the Borrower a Term loan facility of <b>&#x20A6;&nbsp;<?php                  $num =$row['Loan Amount'];          $test=(int)$num;         echo number_format($test);         ?>, pursuant to the Borrower’s application for a COVID-19 TCF.</b></p>
+Subject to the terms and conditions of this Loan Agreement, the Bank hereby agrees to make available to the Borrower a Term loan facility of <b>&#x20A6;&nbsp;<?php                  $num =$row['Approved Loan Amount'];          $test=(int)$num;         echo number_format($test);         ?>, pursuant to the Borrower’s application for a COVID-19 TCF.</b></p>
     <p><b>1. Repayment</b></p>
 
 <p>Subject to the provisions hereunder, the Borrower shall repay the principal of the Loan in full, plus all accrued and unpaid interest thereon and all other outstanding Obligations.</p>
