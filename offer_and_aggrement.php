@@ -333,7 +333,7 @@ session_destroy();
          echo '<script> 
         swal("Error!", "You have rejected the Terms and Conditions!", "error"); 
         setTimeout(function(){
-            window.location.href = "https://https://covid19.nmfb.com.ng/";
+            window.location.href = "https://covid19.nmfb.com.ng/";
          }, 5000);
          </script>';
     
