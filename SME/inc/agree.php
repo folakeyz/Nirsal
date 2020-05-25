@@ -2,7 +2,7 @@
 if(isset($_POST)){
         $agree="Accepted";
         $bvn = $_POST['bvn'];
-        $tsql= "UPDATE SmeGuarantors SET `Decision`='$agree' WHERE ApplicantBvn='$bvn'";
+        $tsql= "UPDATE SmeGuarantors SET Decision='$agree' WHERE ApplicantBvn='$bvn'";
 $getResults= sqlsrv_query($conn, $tsql);
         
         if($getResults){
