@@ -24,7 +24,10 @@ else{
     
 
 ?>
-
+<style>
+ .transfer{background:url(img/covid.jpg);}
+  .btransfer{background:url(img/covid.jpg);}
+</style>
 
 <div class="navigation">
     <img src="img/unnamed.png" alt="Nirsal Logo">
