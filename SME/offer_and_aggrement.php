@@ -330,6 +330,10 @@ Within named Borrower</p>
      session_start();
 session_unset();
 session_destroy();
+            $agree="Rejected";
+        $bvn = $_GET['reject'];
+        $tsql= "UPDATE [SmeGuarantors] SET Decision='$agree' WHERE ApplicantBvn='$bvn'";
+$getResults= sqlsrv_query($conn, $tsql);
          echo '<script> 
         swal("Error!", "You have rejected the Terms and Conditions!", "error"); 
         setTimeout(function(){
@@ -341,7 +345,7 @@ session_destroy();
          
          ?>
      
-     <a class="btn btn-sm btn-danger btn-block" href="inc/agree.php?reject=Yes?bvn=<?=$_SESSION['bvn'];?>">Reject</a>
+     <a class="btn btn-sm btn-danger btn-block" href="offer_and_aggrement.php?reject=<?=$_SESSION['bvn'];?>">Reject</a>
      
     </div>
 </form>
