@@ -341,7 +341,7 @@ session_destroy();
          
          ?>
      
-     <a class="btn btn-sm btn-danger btn-block" href="offer_and_aggrement.php?reject=Yes">Reject</a>
+     <a class="btn btn-sm btn-danger btn-block" href="inc/agree.php?reject=Yes?bvn=<?=$_SESSION['bvn'];?>">Reject</a>
      
     </div>
 </form>
