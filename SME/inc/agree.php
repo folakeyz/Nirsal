@@ -19,7 +19,18 @@ $getResults= sqlsrv_query($conn, $tsql);
     
 }
 
-if(isset($_GET['reject'])){
-        
-        
-}
+
+        if(isset($_GET['reject'])){
+     session_start();
+session_unset();
+session_destroy();
+         echo '<script> 
+        swal("Error!", "You have rejected the Terms and Conditions!", "error"); 
+        setTimeout(function(){
+            window.location.href = "https://covid19.nmfb.com.ng/";
+         }, 5000);
+         </script>';
+    
+} 
+         
+         
