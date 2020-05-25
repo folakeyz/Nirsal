@@ -24,7 +24,13 @@ else{
 }
 
 ?>
-
+<style>
+ .loan-body{
+  background:url(img/covid.jpg)no-repeat;
+  background-position:right;
+ 
+ }
+</style>
 
 <div class="navigation">
     <img src="img/unnamed.png" alt="Nirsal Logo">
