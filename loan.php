@@ -27,7 +27,7 @@ else{
 <style>
  .loan-body{
   background:url(img/covid.jpg)no-repeat;
-  
+  background-position:right;
  
  }
 </style>
