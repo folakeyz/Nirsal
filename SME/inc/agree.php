@@ -1,8 +1,8 @@
 <?php
 if(isset($_POST)){
         $agree="Accepted";
-        $bvn = filter_input(INPUT_POST, 'bvn', FILTER_SANITIZE_STRING);
-        $tsql= "UPDATE SmeGuarantor SET Decision='$agree' WHERE ApplicantBvn='$bvn'";
+       echo $bvn = filter_input(INPUT_POST, 'bvn', FILTER_SANITIZE_STRING);
+        $tsql= "UPDATE SmeGuarantors SET Decision='$agree' WHERE ApplicantBvn='$bvn'";
 $getResults= sqlsrv_query($conn, $tsql);
         
         if($getResults){
@@ -16,4 +16,9 @@ $getResults= sqlsrv_query($conn, $tsql);
         </script>';      
         }
     
+}
+
+if(isset($_GET['reject'])){
+        
+        
 }
