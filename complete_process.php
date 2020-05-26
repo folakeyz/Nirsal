@@ -1,7 +1,11 @@
 <?php 
 session_start();
 require'inc/head.php';
-
+if(!$_GET['BIMS']){
+     echo'<script>
+    window.location.href="offer_and_aggrement.php";
+    </script>'; 
+}
 if(isset($_SESSION['bvn'])){
 $bvn =  $_SESSION['bvn'];
 $tsql= "SELECT * FROM [Targeted Credit Facility (TCF) - Household Loan Application Form] WHERE BVN='$bvn' AND [Approval Status]='APPROVED'";
