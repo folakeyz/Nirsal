@@ -16,7 +16,7 @@ session_destroy();
        echo '<script> 
         swal("Success!", "Bank Has been Updated!", "success"); 
         setTimeout(function(){
-            window.location.href = "https://https://covid19.nmfb.com.ng/";
+            window.location.href = "https://covid19.nmfb.com.ng/";
          }, 5000);
          </script>';
     }else{
