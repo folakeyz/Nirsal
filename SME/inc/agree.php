@@ -9,7 +9,7 @@ $getResults= sqlsrv_query($conn, $tsql);
     if($getResults){
         echo'<script>
         swal("success!", "Terms and Conditions Accepted!", "success");
-       window.location.href="complete_process.php";
+       window.location.href="complete_process.php?BIMS";
         </script>';
         }else{
            echo'<script>
