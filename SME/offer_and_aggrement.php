@@ -35,7 +35,7 @@ else{
     $row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC) 
     ?>
     <h4><b>COVID-19 TARGETED CREDIT FACILITY LOAN OFFER LETTER</b></h4>
-    <h6>REFERENCE NO: COVID19TCF/NMFB/29042020/ABI001 DATE: 29/04/2020</h6>
+    <h6>REFERENCE NO: COVID19TCF/NMFB/29042020/ABI001 DATE: <?=date("Y-M-d");?></h6>
 
 
 COMPANY NAME: <?=$row['Business/Company Name'];?></p>
