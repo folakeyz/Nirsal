@@ -20,6 +20,17 @@
      
 </head>
 <body>
+    <script>
+    
+ window.addEventListener("beforeunload", function (e) {
+  var confirmationMessage = "Your Loan offer would not be sent";
+
+  (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+  return confirmationMessage;                            //Webkit, Safari, Chrome
+});
+
+    
+    </script>
 <script>
         function enforce_maxlength(event) {
             var t = event.target;
