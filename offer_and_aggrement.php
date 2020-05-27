@@ -49,8 +49,8 @@ else{
 <p>Address:<?=$row['Home Address'];?></p>
 
 <p>Dear Sir/Ma,</p>
-<p>OFFER OF SME TERM LOAN FACILITY (COVID19 - TCF)</p>
-<p>We refer to your application for an SME Loan facility under the COVID-19 Targeted Credit Facility Intervention Scheme and are pleased to inform you that the Management of NIRSAL Microfinance Bank Ltd (hereinafter referred to as ‘the bank’) has approved the sum of &#x20A6;&nbsp;<?php
+<p>OFFER OF HOUSEHOLD TERM LOAN FACILITY (COVID19 - TCF)</p>
+<p>We refer to your application for an HOUSEHOLD Loan facility under the COVID-19 Targeted Credit Facility Intervention Scheme and are pleased to inform you that the Management of NIRSAL Microfinance Bank Ltd (hereinafter referred to as ‘the bank’) has approved the sum of &#x20A6;&nbsp;<?php
         
         $num =$row['Approved Loan Amount'];
          $test=(int)$num;
@@ -61,7 +61,7 @@ else{
 <p><b>BORROWERS NAME:<?=$row['Business Name'];?></b>
 
 <b>LENDER: NIRSAL Microfinance Bank Ltd</b>
-<b>FACILITY TYPE: COVID-19 SME Targeted Credit Facility</b>
+<b>FACILITY TYPE: COVID-19 HOUSEHOLD Targeted Credit Facility</b>
 
 <b>PURPOSE: To Finance Working Capital Requirements</b>
 
@@ -71,9 +71,9 @@ APPROVED LOAN AMOUNT: &#x20A6;&nbsp;<?php                  $num =$row['Approved 
 9% per annum (all-in) effective March 1st, 2021 till maturity (subject to money market condition)</p>
  <p><b>REPAYMENT STRUCTURE:</b> Fixed amount per month (covering both principal and interest)
 
-TENOR: 36 months from Disbursement Date.
+TENOR: 12 months from Disbursement Date.
 
-MORATORIUM: 12 months moratorium on both principal & interest
+MORATORIUM: 3 months moratorium on both principal & interest
 
 COLLATERAL: 1. Acceptable 3rd Party Guarantor OR
 
@@ -123,7 +123,7 @@ COLLATERAL: 1. Acceptable 3rd Party Guarantor OR
    <p><u>MEMORANDUM OF ACCEPTANCE</u></p> 
    <p>I, <?=$row['Applicant Name'];?> have read this Offer Letter and the loan agreement and fully understand it.</p>
 
-  <p>I am pleased to willingly accept the Offer of &#x20A6;&nbsp;<?php                  $num =$row['Approved Loan Amount'];          $test=(int)$num;         echo number_format($test);         ?> COVID-19 SME Targeted Credit Facility, along with the Terms and Conditions contained, herein, in the offer letter and the loan agreement dated <?=date("Y-M-d");?> and signed by me.</p><br>
+  <p>I am pleased to willingly accept the Offer of &#x20A6;&nbsp;<?php                  $num =$row['Approved Loan Amount'];          $test=(int)$num;         echo number_format($test);         ?> COVID-19 HOUSEHOLD Targeted Credit Facility, along with the Terms and Conditions contained, herein, in the offer letter and the loan agreement dated <?=date("Y-M-d");?> and signed by me.</p><br>
   <p><b>NAME: <?=$row['Applicant Name'];?><br>
 
 SIGNATURE…………………………..<br>
@@ -141,7 +141,7 @@ Company:  <?=$row['Business Name'];?></b></p><br>
 
 <p>a. The Borrower applied for loan facility under the COVID-19 Targeted Credit Facility (COVID-19 TCF), in accordance with the provisions of the Central Bank of Nigeria (CBN) Guidelines for the operation of COVID-19 TCF (hereafter referred to as ‘the Guidelines’).</p>
 
-<p>b. Sequel to the Borrower’s aforesaid application, the Bank offered the Borrower a Term loan facility of <b class="text-danger">&#x20A6;&nbsp;<?php                  $num =$row['Approved Loan Amount'];          $test=(int)$num;         echo number_format($test);         ?></b> vide a letter titled <b>‘OFFER OF SME TERM LOAN FACILITY ‘(COVID-19 TCF)’</b> and dated 29TH April, 2020, on the terms and conditions specified therein.</p>
+<p>b. Sequel to the Borrower’s aforesaid application, the Bank offered the Borrower a Term loan facility of <b class="text-danger">&#x20A6;&nbsp;<?php                  $num =$row['Approved Loan Amount'];          $test=(int)$num;         echo number_format($test);         ?></b> vide a letter titled <b>‘OFFER OF HOUSEHOLD TERM LOAN FACILITY ‘(COVID-19 TCF)’</b> and dated 29TH April, 2020, on the terms and conditions specified therein.</p>
 
 <p>c. The Borrower has accepted the Bank’s offer of the term loan facility, consequent upon which the parties agreed to execute this Loan Agreement on the terms and conditions herein contained.</p>
 
