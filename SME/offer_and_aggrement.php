@@ -335,7 +335,7 @@ session_destroy();
         $bvn = $_GET['reject'];
         $cname=$row['Business/Company Name'];    
        // $tsql= "UPDATE [SmeGuarantors] SET Decision='$agree' WHERE ApplicantBvn='$bvn'";
-             $tsql="INSERT INTO [SmeGuarantors] (`ApplicantBvn`,`ApplicantName`,`Decision`)VALUES('$bvn','$cname','$agree')";
+             $tsql="INSERT INTO [SmeGuarantors] (ApplicantBvn, ApplicantName, Decision)VALUES('$bvn','$cname','$agree')";
 $getResults= sqlsrv_query($conn, $tsql);
          echo '<script> 
         swal("Error!", "You have rejected the Terms and Conditions!", "error"); 
