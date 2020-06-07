@@ -5,7 +5,7 @@ if(isset($_POST)){
         $bvn = $_POST['bvn'];
          $cname = $_POST['cname'];
        // $tsql= "UPDATE [GuarantorsForms] SET Decision='$agree' WHERE ApplicantBvn='$bvn'";
-        $tsql="INSERT INTO [GuarantorsForms] (`ApplicantBvn`,`ApplicantName`,`Decision`)VALUES('$bvn','$cname','$agree')";
+        $tsql="INSERT INTO [GuarantorsForms] (ApplicantBvn, ApplicantName, Decision)VALUES('$bvn','$cname','$agree')";
 $getResults= sqlsrv_query($conn, $tsql);
 
     if($getResults){
@@ -15,7 +15,7 @@ $getResults= sqlsrv_query($conn, $tsql);
         </script>';
         }else{
            echo'<script>
-      swal("Warning!", "An Error Occured,'.$bvn.'Please Try again!", "warning");
+      swal("Warning!", "An Error Occured, Please Try again!", "warning");
         </script>';      
         }
     
