@@ -58,7 +58,7 @@ else{
         ?>, subject to the following terms and conditions:</p>
    
    
-<p><b>BORROWERS NAME:<?=$row['Business Name'];?></b>
+<p><b>BORROWERS NAME:<?=$row['Applicant Name'];?></b>
 
 <b>LENDER: NIRSAL Microfinance Bank Ltd</b>
 <b>FACILITY TYPE: COVID-19 HOUSEHOLD Targeted Credit Facility</b>
