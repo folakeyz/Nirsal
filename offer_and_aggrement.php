@@ -325,6 +325,7 @@ Within named Borrower</p>
    <p id="result"></p>
     <div class="form-group col-md-12">
      <input type="hidden" name="bvn" value="<?=$_SESSION['bvn'];?>">
+          <input type="hidden" name="cname" value="<?=$row['Applicant Name'];?>">
          <p><input type="checkbox" name="check" required>
         &nbsp;I have read and agree to the Terms and Conditions, Acceptance of this offer and agreement is subject to the Guarantor’s consent.</p>
     </div>
