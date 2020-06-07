@@ -44,7 +44,7 @@ else{
     <form method="" action="">
 
 <div class="guarantor">
-     <small>Guarantor's Info</small><hr>
+     <small>Beneficiary's Info</small><hr>
                     <div class="col-md-4 form-group float-left">
            <label>Applicant's Name</label>
            <input type="text" class="form-control" value="<?=$row['Applicant Name'];?>" readonly>
