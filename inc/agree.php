@@ -5,7 +5,7 @@ if(isset($_POST)){
         $bvn = $_POST['bvn'];
          $cname = $_POST['cname'];
        // $tsql= "UPDATE [GuarantorsForms] SET Decision='$agree' WHERE ApplicantBvn='$bvn'";
-        $tsql="INSERT INTO [GuarantorsForms] (`ApplicantBvn`,`ApplicantName`)VALUES('$bvn','$cname')";
+        $tsql="INSERT INTO [GuarantorsForms] (`ApplicantBvn`,`ApplicantName`,`Decision`)VALUES('$bvn','$cname','$agree')";
 $getResults= sqlsrv_query($conn, $tsql);
 
     if($getResults){
