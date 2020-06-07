@@ -4,7 +4,7 @@ if(isset($_POST)){
         $agree="Accepted";
         $bvn = $_POST['bvn'];
         $cname=$_POST['cname'];
-          $tsql="INSERT INTO [SmeGuarantors] (`ApplicantBvn`,`ApplicantName`,`Decision`)VALUES('$bvn','$cname','$agree')";
+          $tsql="INSERT INTO [SmeGuarantors] (ApplicantBvn, ApplicantName, Decision)VALUES('$bvn','$cname','$agree')";
 $getResults= sqlsrv_query($conn, $tsql);
 
     if($getResults){
