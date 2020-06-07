@@ -318,6 +318,7 @@ Within named Borrower</p>
    <p id="result"></p>
     <div class="form-group col-md-12">
         <input type="hidden" name="bvn" value="<?=$_SESSION['bvn'];?>">
+        <input type="hidden" name="cname" value="<?=$row['Business/Company Name'];?>">
          <p><input type="checkbox" name="check" required>
         &nbsp;I have read and agree to the Terms and Conditions, Acceptance of this offer and agreement is subject to the Guarantor’s consent</p>
     </div>
@@ -332,7 +333,9 @@ session_unset();
 session_destroy();
             $agree="Rejected";
         $bvn = $_GET['reject'];
-        $tsql= "UPDATE [SmeGuarantors] SET Decision='$agree' WHERE ApplicantBvn='$bvn'";
+        $cname=$row['Business/Company Name'];    
+       // $tsql= "UPDATE [SmeGuarantors] SET Decision='$agree' WHERE ApplicantBvn='$bvn'";
+             $tsql="INSERT INTO [SmeGuarantors] (`ApplicantBvn`,`ApplicantName`,`Decision`)VALUES('$bvn','$cname','$agree')";
 $getResults= sqlsrv_query($conn, $tsql);
          echo '<script> 
         swal("Error!", "You have rejected the Terms and Conditions!", "error"); 
