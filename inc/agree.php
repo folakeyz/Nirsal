@@ -16,7 +16,7 @@ $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
 $getResults= sqlsrv_query($conn, $tsql);   
                  if($getResults){
         echo'<script>
-        swal("success!", "Terms and Conditions Accepted!", "success");
+        swal("success!", "Accepted!", "success");
        window.location.href="complete_process.php?BIMS=BIMS";
         </script>';
         }else{
