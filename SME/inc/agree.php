@@ -3,7 +3,14 @@ require'dbh.inc.php';
 if(isset($_POST)){
         $agree="Accepted";
         $bvn = $_POST['bvn'];
-        $cname=$_POST['cname'];
+        $cname= filter_input(INPUT_POST, 'cname', FILTER_SANITIZE_STRING);
+        
+           $tsqls= "SELECT * FROM [SmeGuarantors] WHERE ApplicantBvn='$bvn'";
+$params = array();
+$options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
+    $getResult= sqlsrv_query($conn, $tsqls, $params, $options);
+    $count=sqlsrv_num_rows($getResult);
+        if($count == 0){
           $tsql="INSERT INTO [SmeGuarantors] (ApplicantBvn, ApplicantName, Decision)VALUES('$bvn','$cname','$agree')";
 $getResults= sqlsrv_query($conn, $tsql);
 
@@ -19,6 +26,14 @@ $getResults= sqlsrv_query($conn, $tsql);
         }
     
 }
+}else{
+  echo'<script>
+        swal("success!", "Terms and Conditions Accepted!", "success");
+       window.location.href="complete_process.php?BIMS=BIMS";
+        </script>';      
+}
+        
+        
 
 
         if(isset($_GET['reject'])){
