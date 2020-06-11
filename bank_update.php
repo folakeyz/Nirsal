@@ -1,7 +1,11 @@
 <?php 
 session_start();
 require'inc/head.php';
-
+if(!$_GET['BIMS']){
+     echo'<script>
+    window.location.href="offer_and_aggrement.php";
+    </script>'; 
+}
 if(isset($_SESSION['bvn'])){
 $bvn =  $_SESSION['bvn'];
 $tsql= "SELECT * FROM [Targeted Credit Facility (TCF) - Household Loan Application Form] WHERE BVN='$bvn' AND [Approval Status]='APPROVED'";
@@ -38,11 +42,11 @@ else{
         <h4 class="text-success"><b>Enter Bank and Account Number</b></h4><hr> 
        <div class="form-group col-md-6">
        <label>Bank Name</label>
-       <input type="text" name="bname" class="form-control" value=""> 
+       <input type="text" name="bname" class="form-control" value="" required> 
         </div> 
         <div class="form-group col-md-6">
        <label>Account Number</label>
-       <input type="text" name="bnumber" class="form-control" value=""> 
+       <input type="text" name="bnumber" class="form-control" value="" required> 
        <input type="hidden" name="bvn" class="form-control" value="<?=$bvn;?>"> 
         </div> 
         <div class="form-group col-md-6">
