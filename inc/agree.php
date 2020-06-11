@@ -27,7 +27,8 @@ $getResults= sqlsrv_query($conn, $tsql);
         }else{
            echo'<script>
         swal("success!", "Accepted!", "success");
-       window.location.href="complete_process.php?BIMS=BIMS";      
+       window.location.href="complete_process.php?BIMS=BIMS";   
+        </script>';
         }
       
 
