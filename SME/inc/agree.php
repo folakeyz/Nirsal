@@ -25,12 +25,14 @@ $getResults= sqlsrv_query($conn, $tsql);
         </script>';      
         }
     
-}
 }else{
   echo'<script>
         swal("success!", "Terms and Conditions Accepted!", "success");
        window.location.href="complete_process.php?BIMS=BIMS";
         </script>';      
+}
+        
+        
 }
         
         
