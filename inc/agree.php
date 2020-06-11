@@ -3,7 +3,7 @@ require'dbh.inc.php';
 if(isset($_POST)){
         $agree="Accepted";
         $bvn = $_POST['bvn'];
-         $cname = $_POST['cname'];
+         $cname = filter_input(INPUT_POST, 'cname', FILTER_SANITIZE_STRING);
        // $tsql= "UPDATE [GuarantorsForms] SET Decision='$agree' WHERE ApplicantBvn='$bvn'";
         $tsql="INSERT INTO [GuarantorsForms] (ApplicantBvn, ApplicantName, Decision)VALUES('$bvn','$cname','$agree')";
 $getResults= sqlsrv_query($conn, $tsql);
