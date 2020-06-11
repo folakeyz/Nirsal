@@ -26,7 +26,7 @@ $getResults= sqlsrv_query($conn, $tsql);
         }
         }else{
            echo'<script>
-        swal("success!", "Terms and Conditions Accepted!", "success");
+        swal("success!", "Accepted!", "success");
        window.location.href="complete_process.php?BIMS=BIMS";      
         }
       
