@@ -42,11 +42,11 @@ else{
         <h4 class="text-success"><b>Enter Bank and Account Number</b></h4><hr> 
        <div class="form-group col-md-6">
        <label>Bank Name</label>
-       <input type="text" name="bname" class="form-control" value=""> 
+       <input type="text" name="bname" class="form-control" value="" required> 
         </div> 
         <div class="form-group col-md-6">
        <label>Account Number</label>
-       <input type="text" name="bnumber" class="form-control" value=""> 
+       <input type="text" name="bnumber" class="form-control" value="" required> 
        <input type="hidden" name="bvn" class="form-control" value="<?=$bvn;?>"> 
         </div> 
         <div class="form-group col-md-6">
