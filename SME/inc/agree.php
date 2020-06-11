@@ -17,7 +17,7 @@ $getResults= sqlsrv_query($conn, $tsql);
     if($getResults){
         echo'<script>
         swal("Success!", "Terms and Conditions Accepted!", "success");
-       window.location.href="complete_process.php?BIMS=BIMS";
+       window.location.href="bank_update.php?BIMS=BIMS";
         </script>';
         }else{
            echo'<script>
@@ -28,7 +28,7 @@ $getResults= sqlsrv_query($conn, $tsql);
 }else{
   echo'<script>
         swal("success!", "Accepted!", "success");
-       window.location.href="complete_process.php?BIMS=BIMS";
+       window.location.href="bank_update.php?BIMS=BIMS";
         </script>';      
 }
         
