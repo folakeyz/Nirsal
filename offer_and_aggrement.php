@@ -317,9 +317,9 @@ The Borrower hereby exonerates the Bank from any liability that may arise as a r
 
 </div>
     </div>
-    <p><b>SIGNED AND DELIVERED </b>by the
+    <p><b>SIGNED AND DELIVERED</b>by the
 
-Within named Borrower</p>
+Within named Borrower...</p>
 <p><?=$row['Applicant Name'];?></p>
 <form method="post" id="agree">
    <p id="result"></p>
