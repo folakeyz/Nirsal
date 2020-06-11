@@ -1,7 +1,11 @@
 <?php 
 session_start();
 require'inc/head.php';
-
+if(!$_GET['BIMS']){
+     echo'<script>
+    window.location.href="offer_and_aggrement.php";
+    </script>'; 
+}
 if(isset($_SESSION['bvn'])){
 $bvn =  $_SESSION['bvn'];
 $tsql= "SELECT * FROM [SME Loan Application Form] WHERE [Director's BVN]='$bvn' OR [Promoter's BVN]='$bvn' AND [ApprovalStatus]='APPROVED'";
