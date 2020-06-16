@@ -8,9 +8,10 @@ $params = array();
 $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
     $getResults= sqlsrv_query($conn, $tsql, $params, $options);
     $count=sqlsrv_num_rows($getResults);
-     $row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC);
+    while $row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC){
 echo $row['ApprovalStatus'];
 echo $row['Business/Company Name'];
+    }
     echo $count;
 
 
