@@ -14,4 +14,4 @@ $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
             echo $row['Approved Loan Amount'].'<br>';
 
     }
-    echo $count;
+  //  echo $count;
