@@ -3,7 +3,7 @@
 session_start();
 require'inc/head.php';
 $bvn=22143025438;
-$tsql= "SELECT * FROM [SME Loan Application Form] WHERE [Director's BVN]='$bvn' OR [Promoter's BVN]='$bvn' AND [ApprovalStatus]='APPROVED'";
+$tsql= "SELECT * FROM [SME Loan Application Form] WHERE [Director's BVN]='$bvn' OR [Promoter's BVN]='$bvn' AND [ApprovalStatus]='Approved'";
 $params = array();
 $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
     $getResults= sqlsrv_query($conn, $tsql, $params, $options);
