@@ -13,5 +13,3 @@ echo $row['ApprovalStatus'];
 echo $row['Business/Company Name'];
     }
     echo $count;
-
-
