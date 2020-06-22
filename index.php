@@ -10,11 +10,11 @@ $params = array();
 $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
     $getResults= sqlsrv_query($conn, $tsql, $params, $options);
     $count=sqlsrv_num_rows($getResults);
- 
+ echo $count;
 if($count == 0){
-     echo'<script>
+     /*echo'<script>
     window.location.href="https://covid19.nmfb.com.ng/";
-    </script>';
+    </script>';*/
 }else{
   echo'<script>
     window.location.href="loan.php";
