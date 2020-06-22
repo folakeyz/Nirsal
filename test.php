@@ -9,7 +9,7 @@ $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
     $getResults= sqlsrv_query($conn, $tsql, $params, $options);
     $count=sqlsrv_num_rows($getResults);
  while($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)){
-        echo $row['ApprovalStatus'].'<br>';
+        echo $row['Approval Status'].'<br>';
             echo $row['Approved Loan Amount'].'<br>';
 
     }
