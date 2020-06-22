@@ -6,7 +6,7 @@ if(isset($_GET['id'])){
 $bvn = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING);  
 $_SESSION['bvn']=$bvn;
  $stat="APPROVED";
- $tsql= "SELECT * FROM [Targeted Credit Facility (TCF) - Household Loan Application Form] WHERE BVN='$bvn' AND [Approval Status]='$stat'";
+ $tsql= "SELECT * FROM [Targeted Credit Facility (TCF) - Household Loan Application Form] WHERE BVN='$bvn' AND [Approval Status] !=NULL";
 $params = array();
 $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
     $getResults= sqlsrv_query($conn, $tsql, $params, $options);
