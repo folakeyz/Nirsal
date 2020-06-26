@@ -18,7 +18,7 @@ $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
   echo $count.'<br>';
 */
 $app="APPROVED";
-$tsql= "SELECT * FROM [SME Loan Application Form] WHERE [ApprovalStatus]='$app'";
+$tsql= "SELECT * FROM [SME Loan Application Form] WHERE [ApprovalStatus] IS NOT NULL";
 $params = array();
 $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
     $getResults= sqlsrv_query($conn, $tsql, $params, $options);
