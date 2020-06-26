@@ -17,7 +17,7 @@ $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
     }
   echo $count.'<br>';
 */
-
+$app="APPROVED";
 $tsql= "SELECT * FROM [SME Loan Application Form] WHERE [ApprovalStatus]='$app'";
 $params = array();
 $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
