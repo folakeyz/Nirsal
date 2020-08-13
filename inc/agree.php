@@ -4,6 +4,7 @@ if(isset($_POST)){
         $agree="Accepted";
         $bvn = $_POST['bvn'];
          $cname = filter_input(INPUT_POST, 'cname', FILTER_SANITIZE_STRING);
+        $date=date("d-m-y h:i:a");
         
         $tsqls= "SELECT * FROM [GuarantorsForms] WHERE ApplicantBvn='$bvn'";
 $params = array();
@@ -12,7 +13,7 @@ $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
     $count=sqlsrv_num_rows($getResult);
         if($count == 0){
               // $tsql= "UPDATE [GuarantorsForms] SET Decision='$agree' WHERE ApplicantBvn='$bvn'";
-        $tsql="INSERT INTO [GuarantorsForms] (ApplicantBvn, ApplicantName, Decision)VALUES('$bvn','$cname','$agree')";
+        $tsql="INSERT INTO [GuarantorsForms] (ApplicantBvn, ApplicantName, Decision, Created)VALUES('$bvn','$cname','$agree', '$date')";
 $getResults= sqlsrv_query($conn, $tsql);   
                  if($getResults){
         echo'<script>
