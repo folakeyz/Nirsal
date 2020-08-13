@@ -4,14 +4,14 @@ if(isset($_POST)){
         $agree="Accepted";
         $bvn = $_POST['bvn'];
         $cname= filter_input(INPUT_POST, 'cname', FILTER_SANITIZE_STRING);
-        
+        $date =date("d-m-y h:i:a");
            $tsqls= "SELECT * FROM [SmeGuarantors] WHERE ApplicantBvn='$bvn'";
 $params = array();
 $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
     $getResult= sqlsrv_query($conn, $tsqls, $params, $options);
     $count=sqlsrv_num_rows($getResult);
         if($count == 0){
-          $tsql="INSERT INTO [SmeGuarantors] (ApplicantBvn, ApplicantName, Decision)VALUES('$bvn','$cname','$agree')";
+          $tsql="INSERT INTO [SmeGuarantors] (ApplicantBvn, ApplicantName, Decision, Created)VALUES('$bvn','$cname','$agree', '$date')";
 $getResults= sqlsrv_query($conn, $tsql);
 
     if($getResults){
