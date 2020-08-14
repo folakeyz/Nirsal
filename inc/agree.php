@@ -1,6 +1,5 @@
 <?php
- $date=date("d-m-y h:i:a");
-echo $date;
+
 require'dbh.inc.php';
 if(isset($_POST)){
         $agree="Accepted";
@@ -15,7 +14,7 @@ $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
     $count=sqlsrv_num_rows($getResult);
         if($count == 0){
               // $tsql= "UPDATE [GuarantorsForms] SET Decision='$agree' WHERE ApplicantBvn='$bvn'";
-        $tsql="INSERT INTO [GuarantorsForms] (ApplicantBvn, ApplicantName, Decision, Created)VALUES('$bvn','$cname','$agree', '$date')";
+        $tsql="INSERT INTO [GuarantorsForms] (ApplicantBvn, ApplicantName, Decision, timestamp)VALUES('$bvn','$cname','$agree', '$date')";
 $getResults= sqlsrv_query($conn, $tsql);   
                  if($getResults){
         echo'<script>
