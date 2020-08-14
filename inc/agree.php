@@ -1,4 +1,5 @@
 <?php
+echo date;
 require'dbh.inc.php';
 if(isset($_POST)){
         $agree="Accepted";
