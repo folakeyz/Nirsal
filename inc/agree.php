@@ -1,4 +1,5 @@
 <?php
+ $date=date("d-m-y h:i:a");
 echo $date;
 require'dbh.inc.php';
 if(isset($_POST)){
