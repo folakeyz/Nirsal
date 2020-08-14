@@ -11,7 +11,7 @@ $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
     $getResult= sqlsrv_query($conn, $tsqls, $params, $options);
     $count=sqlsrv_num_rows($getResult);
         if($count == 0){
-          $tsql="INSERT INTO [SmeGuarantors] (ApplicantBvn, ApplicantName, Decision, Created)VALUES('$bvn','$cname','$agree', '$date')";
+          $tsql="INSERT INTO [SmeGuarantors] (ApplicantBvn, ApplicantName, Decision, timestamp)VALUES('$bvn','$cname','$agree', '$date')";
 $getResults= sqlsrv_query($conn, $tsql);
 
     if($getResults){
