@@ -73,9 +73,9 @@ APPROVED LOAN AMOUNT: &#x20A6;&nbsp;<?php                  $num =$row['Approved 
 9% per annum (all-in) effective March 1st, 2021 till maturity (subject to money market condition)</p>
  <p><b>REPAYMENT STRUCTURE:</b> Fixed amount per month (covering both principal and interest)
 
-TENOR: 12 months from Disbursement Date.
+TENOR: 36 months from Disbursement Date.
 
-MORATORIUM: 3 months moratorium on both principal & interest
+MORATORIUM: 12 months moratorium on both principal & interest
 
 COLLATERAL: 1. Acceptable 3rd Party Guarantor OR
 
