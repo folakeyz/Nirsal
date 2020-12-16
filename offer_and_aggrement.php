@@ -223,7 +223,7 @@ Subject to the terms and conditions of this Loan Agreement, the Bank hereby agre
 
 <p>It is or becomes unlawful for the Borrower not to perform any of his/her obligations under this Agreement.</p>
 
-<p>d. Repudiation</p>
+<p>d. Repudiation </p>
 
 <p>The Borrower repudiates this Agreement or evidences an intention to repudiate this Agreement.</p>
 
