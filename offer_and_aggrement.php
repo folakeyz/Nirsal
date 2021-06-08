@@ -68,7 +68,7 @@ else{
 <b>PURPOSE: To Finance Working Capital Requirements</b>
 
 APPROVED LOAN AMOUNT: &#x20A6;&nbsp;<?php                  $num =$row['Approved Loan Amount'];          $test=(int)$num;         echo number_format($test);         ?></p>
-   <p><b>INTEREST RATE:</b> 5% per annum (all-in) up till February 28th, 2021(4% one off interest will be deducted on disbursement; 1% p.a to be charged till February 2021)
+   <p><b>INTEREST RATE:</b> 5% per annum (all-in) up till February 28th, 2022(4% one off interest will be deducted on disbursement; 1% p.a to be charged till February 2022)
 
 9% per annum (all-in) effective March 1st, 2021 till maturity (subject to money market condition)</p>
  <p><b>REPAYMENT STRUCTURE:</b> Fixed amount per month (covering both principal and interest)
@@ -107,16 +107,16 @@ COLLATERAL: 1. Acceptable 3rd Party Guarantor OR
 <p>For: <b>NIRSAL MICROFINANCE BANK</b></p>
 <div class="col-md-12">
 <div class="col-md-4 float-left">
-  <img src="img/one.png">  
-  <p>CHIBUZO OGBONNA </p>
+  <img src="img/one.jpg">  
+<!--  <p>CHIBUZO OGBONNA </p>-->
 <b>PRODUCT MANAGER </b>
 </div>
 <div class="col-md-4 float-left">
    <p><br></p>
     </div>
 <div class="col-md-4 float-left">
-  <img src="img/two.png">
-  <p>JERRY OSAGIE</p>
+  <img src="img/two.jpg">
+<!--  <p>JERRY OSAGIE</p>-->
   <b>HEAD, CREDIT</b>
 
 </div>
