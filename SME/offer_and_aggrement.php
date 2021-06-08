@@ -62,7 +62,7 @@ COMPANY NAME: <?=$row['Business/Company Name'];?></p>
 <b>PURPOSE: To Finance Working Capital Requirements</b>
 
 APPROVED LOAN AMOUNT: &#x20A6;&nbsp;<?php                  $num =$row['Approved Loan Amount'];          $test=(int)$num;         echo number_format($test);         ?></p>
-   <p><b>INTEREST RATE:</b> 5% per annum (all-in) up till February 28th, 2021(4% one off interest will be deducted on disbursement; 1% p.a to be charged till February 2021)
+   <p><b>INTEREST RATE:</b> 5% per annum (all-in) up till February 28th, 2022(4% one off interest will be deducted on disbursement; 1% p.a to be charged till February 2022)
 
 9% per annum (all-in) effective March 1st, 2021 till maturity (subject to money market condition)</p>
  <p><b>REPAYMENT STRUCTURE:</b> Fixed amount per month (covering both principal and interest)
@@ -101,16 +101,16 @@ COLLATERAL: 1. Acceptable 3rd Party Guarantor OR
 <p>For: <b>NIRSAL MICROFINANCE BANK</b></p>
 <div class="col-md-12">
 <div class="col-md-4 float-left">
-  <img src="img/one.png">  
-  <p>CHIBUZO OGBONNA </p>
+  <img src="img/one.jpg">  
+<!--  <p>CHIBUZO OGBONNA </p>-->
 <b>PRODUCT MANAGER </b>
 </div>
 <div class="col-md-4 float-left">
    <p><br></p>
     </div>
 <div class="col-md-4 float-left">
-  <img src="img/two.png">
-  <p>JERRY OSAGIE</p>
+  <img src="img/two.jpg">
+<!--  <p>JERRY OSAGIE</p>-->
   <b>HEAD, CREDIT</b>
 
 </div>
@@ -281,7 +281,7 @@ The Borrower hereby exonerates the Bank from any liability that may arise as a r
 
     <p>The Borrower shall adequately insure the loan amount with a reputable insurance company endorsed by the Banker’s nominated Insurance Broker.</p>
 
-    <p>The Borrower shall retain an equivalent of 1% of the loan value towards Insurance Premium payments to satisfy the requirement for Credit Life Insurance.</p>
+    <p>The Borrower shall retain an equivalent of 1.4% of the loan value towards Insurance Premium payments to satisfy the requirement for Credit Life Insurance.</p>
 
 <p><b>15.Governing law</b></p>
 
